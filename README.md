@@ -10,7 +10,7 @@ const tdtrans = require('tempdir-transaction')
 
 async function () {
     // Given function is awaited with Promise.resolve
-    const a = tdtrans(async (tempdir) => {
+    const a = await tdtrans(async (tempdir) => {
         console.log(tempdir) // /tmp/912lfewjoifje-fweio
         fs.writeFileSync(path.join(tempdir, 'foo'), 'bar')
         return '123'
