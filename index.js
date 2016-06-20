@@ -15,7 +15,11 @@ module.exports = function (fn) {
           if (err) return reject(err)
           return resolve(retval)
         })
-      }).catch(reject)
+      }).catch(function (err) {
+        rimraf(tempDir, function (rmErr) {
+          return reject(rmErr || err)
+        })
+      })
     })
   })
 }

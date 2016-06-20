@@ -1,6 +1,6 @@
 {
   "name": "tempdir-transaction",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "temporary directory transactions; cleans up after itself",
   "main": "index.js",
   "scripts": {

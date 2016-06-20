@@ -35,3 +35,21 @@ test('should create temp dir, and clean up temp dir afterwards', async (t) => {
 
   t.is(a, '123')
 })
+
+test('clean up even if function rejects', async (t) => {
+  t.plan(2)
+
+  let oldTempdir
+  try {
+    await trans(async (tempdir) => {
+      oldTempdir = tempdir
+      const filename = path.join(tempdir, 'bar')
+      fs.writeFileSync(filename, 'foo')
+      throw new Error('uh oh')
+    })
+    throw new Error('did not throw')
+  } catch (err) {
+    t.is(err.message, 'uh oh')
+    t.is(isDirectory.sync(oldTempdir), false)
+  }
+})
