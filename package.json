@@ -1,0 +1,28 @@
+{
+  "name": "tempdir-transaction",
+  "version": "1.0.0",
+  "description": "temporary directory transactions; cleans up after itself",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/seapunk/tempdir-transaction.git"
+  },
+  "author": "Ivan K <ivan@sq10.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seapunk/tempdir-transaction/issues"
+  },
+  "homepage": "https://github.com/seapunk/tempdir-transaction#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.2",
+    "unique-temp-dir": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "standard": "^7.1.2"
+  }
+}
