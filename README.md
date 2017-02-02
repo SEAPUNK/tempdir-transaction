@@ -1,6 +1,8 @@
 tempdir-transaction
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SEAPUNK/tempdir-transaction.svg)](https://greenkeeper.io/)
+
 `npm install tempdir-transaction`
 
 *Requires Promises to be in global scope*
